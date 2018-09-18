@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Длительная операция на сервере (демо)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="75">
+			<DataPath>Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
+		</InputField>
+		<InputField name="ЗапросXPath1" id="72">
+			<DataPath>ЗапросXPath1</DataPath>
+			<ContextMenu name="ЗапросXPath1КонтекстноеМеню" id="73"/>
+			<ExtendedTooltip name="ЗапросXPath1РасширеннаяПодсказка" id="74"/>
+		</InputField>
+		<InputField name="ЗапросXPath2" id="111">
+			<DataPath>ЗапросXPath2</DataPath>
+			<ContextMenu name="ЗапросXPath2КонтекстноеМеню" id="112"/>
+			<ExtendedTooltip name="ЗапросXPath2РасширеннаяПодсказка" id="113"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="81">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<Button name="ВыполнитьДлительнуюОперациюСервер" id="1">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыполнитьДлительнуюОперациюСервер</CommandName>
+					<ExtendedTooltip name="ВыполнитьДлительнуюОперациюСерверРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<InputField name="КоличествоПорций" id="78">
+					<DataPath>КоличествоПорций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>порций</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<Width>1</Width>
+					<ContextMenu name="КоличествоПорцийКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="КоличествоПорцийРасширеннаяПодсказка" id="80"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа2" id="86">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<Page name="Группа3" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<Table name="СписокФайлов" id="28">
+							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
+							<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокФайлов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокФайловКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="СписокФайловКоманднаяПанель" id="30"/>
+							<ExtendedTooltip name="СписокФайловРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="СписокФайловСтрокаПоиска" id="32">
+								<AdditionSource>
+									<Item>СписокФайлов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайловСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="СписокФайловСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокФайловСостояниеПросмотра" id="35">
+								<AdditionSource>
+									<Item>СписокФайлов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайловСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="СписокФайловСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокФайловУправлениеПоиском" id="38">
+								<AdditionSource>
+									<Item>СписокФайлов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайловУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="СписокФайловУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокФайловИмяФайла" id="41">
+									<DataPath>СписокФайлов.ИмяФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокФайловИмяФайлаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СписокФайловИмяФайлаРасширеннаяПодсказка" id="43"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ДанныеЗаданий" id="44">
+							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
+							<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДанныеЗаданий</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДанныеЗаданийКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="ДанныеЗаданийКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="ДанныеЗаданийРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="ДанныеЗаданийСтрокаПоиска" id="48">
+								<AdditionSource>
+									<Item>ДанныеЗаданий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеЗаданийСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ДанныеЗаданийСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДанныеЗаданийСостояниеПросмотра" id="51">
+								<AdditionSource>
+									<Item>ДанныеЗаданий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеЗаданийСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ДанныеЗаданийСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДанныеЗаданийУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>ДанныеЗаданий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеЗаданийУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ДанныеЗаданийУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДанныеЗаданийИдентификаторЗадания" id="57">
+									<DataPath>ДанныеЗаданий.ИдентификаторЗадания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗаданийИдентификаторЗаданияКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ДанныеЗаданийИдентификаторЗаданияРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+								<InputField name="ДанныеЗаданийАдресРезультата" id="60">
+									<DataPath>ДанныеЗаданий.АдресРезультата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗаданийАдресРезультатаКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ДанныеЗаданийАдресРезультатаРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="ДанныеЗаданийПроцент" id="63">
+									<DataPath>ДанныеЗаданий.Процент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗаданийПроцентКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ДанныеЗаданийПроцентРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="ДанныеЗаданийСтатусВыполнения" id="66">
+									<DataPath>ДанныеЗаданий.СтатусВыполнения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеЗаданийСтатусВыполненияКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ДанныеЗаданийСтатусВыполненияРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<CheckBoxField name="ДанныеЗаданийВыполнено" id="69">
+									<DataPath>ДанныеЗаданий.ЗаданиеВыполнено</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДанныеЗаданийВыполненоКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ДанныеЗаданийВыполненоРасширеннаяПодсказка" id="71"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Группа4" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лог</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<Table name="Лог" id="92">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Лог</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЛогКонтекстноеМеню" id="93"/>
+							<AutoCommandBar name="ЛогКоманднаяПанель" id="94"/>
+							<ExtendedTooltip name="ЛогРасширеннаяПодсказка" id="95"/>
+							<SearchStringAddition name="ЛогСтрокаПоиска" id="96">
+								<AdditionSource>
+									<Item>Лог</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛогСтрокаПоискаКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ЛогСтрокаПоискаРасширеннаяПодсказка" id="98"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЛогСостояниеПросмотра" id="99">
+								<AdditionSource>
+									<Item>Лог</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛогСостояниеПросмотраКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ЛогСостояниеПросмотраРасширеннаяПодсказка" id="101"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЛогУправлениеПоиском" id="102">
+								<AdditionSource>
+									<Item>Лог</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛогУправлениеПоискомКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ЛогУправлениеПоискомРасширеннаяПодсказка" id="104"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЛогПорядок" id="105">
+									<DataPath>Лог.Порядок</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЛогПорядокКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ЛогПорядокРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ЛогТекстСообщения" id="108">
+									<DataPath>Лог.ТекстСообщения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЛогТекстСообщенияКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ЛогТекстСообщенияРасширеннаяПодсказка" id="110"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ДлительнаяОперацияНаСервереДемо</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокФайлов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяФайла" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПутьКВнешнейОбработке" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к внешней обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПутьКВнешнейОбработкеНаСервере" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к внешней обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресХранилищаВнешнейОбработки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища внешней обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеЗаданий" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные заданий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторЗадания" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор задания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АдресРезультата" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес результата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Процент" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусВыполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаданиеВыполнено" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗапросXPath1" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос XPath 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ЗапросXPath1</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Организация" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоПорций" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество порций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>КоличествоПорций</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Лог" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Порядок" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстСообщения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст сообщения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗапросXPath2" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос XPath 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ЗапросXPath2</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьДлительнуюОперациюСервер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить длительную операцию на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить длительную операцию сервер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьДлительнуюОперациюСервер</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
