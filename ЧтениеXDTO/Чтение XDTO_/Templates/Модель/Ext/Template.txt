@@ -1,0 +1,8 @@
+﻿<Model xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Model">
+	<package targetNamespace="http://www.sample-package.org" elementFormQualified="true" attributeFormQualified="false">
+		<objectType name="ТипОбъекта1">
+			<property name="__content" type="xs:int" form="Text"/>
+			<property name="Атрибут" type="xs:string" form="Attribute"/>
+		</objectType>
+	</package>
+</Model>
